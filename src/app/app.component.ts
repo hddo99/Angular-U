@@ -11,7 +11,6 @@ export class AppComponent {
   randomText = lorem.sentence();
   enteredText: string = '';
 
-
   onInput(event: any){
     this.enteredText = event.target.value;
 
@@ -26,7 +25,9 @@ export class AppComponent {
   }
 
   generateNewText(){
-    this.randomText = lorem.sentence();
-    this.enteredText='';
+    setTimeout(()=> {
+      this.randomText = lorem.sentence();
+      this.enteredText='';
+    },400);    
   }
 }
